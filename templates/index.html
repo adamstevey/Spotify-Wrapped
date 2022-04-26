@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Spotify Wrapped</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}">
   </head>
   <body>
-      <div>
+    <div class="float-container">
+      <div class="float-child tracks">
         <h1>Top Tracks:</h1>
         <ul>
             {% for item in tracks %} 
@@ -15,14 +17,14 @@
             {% endfor %} 
         </ul>
       </div>
-      <div>
+      <div class="float-child artists">
           <h1>Top Artists</h1>
             {% for item in artists %} 
             <li>{{ item }}</li>
             {% endfor %} 
         </ul>
       </div>
-      <div>
+      <div class="float-child genres">
           <h1>Top Genres</h1>
           <ul>
             {% for item in genres %} 
@@ -30,5 +32,6 @@
             {% endfor %}
           </ul>
       </div>
+    </div>
   </body>
 </html>

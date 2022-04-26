@@ -1,0 +1,13 @@
+.float-container {
+    width: 50%;
+    margin: auto;
+}
+.float-child.tracks {
+    float: left;
+}
+.float-child.artists {
+    float: left;
+}
+.float-child.genres {
+    float: left;
+}
