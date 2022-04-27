@@ -42,6 +42,7 @@ def wrapped():
 
     # Get Genre data
     genres = {}
+    genres_condensed = {}
     for artist in artist_data:
         for genre in artist['genres']:
             if genre in genres:
@@ -49,9 +50,12 @@ def wrapped():
             else:
                 genres[genre] = 1
     
-    # get song data
+    # remove infrequent genres
+    for genre in genres:
+        if genres[genre] != 1:
+            genres_condensed[genre] = genres[genre]
 
-    return render_template("index.html", tracks=track_names, artists=artists, genres=genres)
+    return render_template("index.html", tracks=track_names, artists=artists, genres=genres_condensed)
 
 
 def create_spotify_oauth():

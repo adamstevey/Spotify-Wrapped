@@ -1,6 +1,8 @@
 .float-container {
-    width: 50%;
+    width: 90%;
     margin: auto;
+    color: greenyellow;
+    border: 3px solid greenyellow;
 }
 .float-child.tracks {
     float: left;
@@ -10,4 +12,7 @@
 }
 .float-child.genres {
     float: left;
+}
+body {
+    background-color: black;
 }
